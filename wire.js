@@ -22,7 +22,7 @@ define(function(require) {
 
 	createContext = require('./lib/context');
 
-	rootOptions = { require: require };
+	rootOptions = { require: require.context(".", true, /\/lib\//) };
 
 	/**
 	 * Main Programmtic API.  The top-level wire function that wires contexts
